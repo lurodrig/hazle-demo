@@ -32,7 +32,7 @@ Run apache-tomcat
 docker run --network=host --name tomcat-hazle-demo 9.0.35-jdk8-spring-boot-hazle:latest
 ```
 
-Work In Progress
+##Work In Progress
 
 It looks like I am almost there:
 
