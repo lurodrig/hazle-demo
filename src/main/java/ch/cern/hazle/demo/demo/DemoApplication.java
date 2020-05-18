@@ -7,10 +7,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
 @EnableCaching
-public class DemoApplication {
+public class DemoApplication extends SpringBootServletInitializer {
 
     private static final Logger log = LoggerFactory.getLogger(DemoApplication.class);
 
@@ -18,6 +20,12 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+	return application.sources(DemoApplication.class);
+    }
+
+    
     @Bean
     public CommandLineRunner demo(CustomerRepository repository) {
         return (args) -> {
