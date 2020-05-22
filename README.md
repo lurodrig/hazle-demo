@@ -29,7 +29,7 @@ docker build -t 9.0.35-jdk8-spring-boot-hazle .
 
 Run apache-tomcat
 ```
-docker run --network=host --name tomcat-hazle-demo 9.0.35-jdk8-spring-boot-hazle:latest
+docker run --network=host --name tomcat-hazle-demo 9.0.35-jdk8-spring-boot-hazle::3.12.7
 ```
 
 ## Work In Progress
