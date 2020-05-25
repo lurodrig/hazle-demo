@@ -5,7 +5,6 @@
  */
 package ch.cern.hazle.demo.demo;
 
-import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +12,6 @@ import javax.persistence.Id;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
-@Cacheable
 @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Customer {
 

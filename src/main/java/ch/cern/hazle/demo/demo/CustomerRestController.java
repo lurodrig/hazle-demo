@@ -32,4 +32,10 @@ public class CustomerRestController {
     public Customer one(@PathVariable Long id) {
         return repository.findById(id).orElseThrow(() -> new CustomerNotFoundException(id));
     }
+
+    @GetMapping("/testcache")
+    public String testCache() {
+        return "";
+    }
+
 }

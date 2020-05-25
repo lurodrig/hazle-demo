@@ -37,30 +37,30 @@ public class DemoApplication extends SpringBootServletInitializer {
             repository.save(new Customer("Michelle", "Dessler"));
 
             // fetch all customers
-            log.info("Customers found with findAll():");
-            log.info("-------------------------------");
+            log.debug("Customers found with findAll():");
+            log.debug("-------------------------------");
             for (Customer customer : repository.findAll()) {
-                log.info(customer.toString());
+                log.debug(customer.toString());
             }
-            log.info("");
+            log.debug("");
 
             // fetch an individual customer by ID
             Customer customer = repository.findById(1L);
-            log.info("Customer found with findById(1L):");
-            log.info("--------------------------------");
-            log.info(customer.toString());
-            log.info("");
+            log.debug("Customer found with findById(1L):");
+            log.debug("--------------------------------");
+            log.debug(customer.toString());
+            log.debug("");
 
             // fetch customers by last name
-            log.info("Customer found with findByLastName('Bauer'):");
-            log.info("--------------------------------------------");
+            log.debug("Customer found with findByLastName('Bauer'):");
+            log.debug("--------------------------------------------");
             repository.findByLastName("Bauer").forEach(bauer -> {
-                log.info(bauer.toString());
+                log.debug(bauer.toString());
             });
             // for (Customer bauer : repository.findByLastName("Bauer")) {
             //  log.info(bauer.toString());
             // }
-            log.info("");
+            log.debug("");
         };
     }
 }
