@@ -33,9 +33,4 @@ public class CustomerRestController {
         return repository.findById(id).orElseThrow(() -> new CustomerNotFoundException(id));
     }
 
-    @GetMapping("/testcache")
-    public String testCache() {
-        return "";
-    }
-
 }

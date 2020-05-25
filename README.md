@@ -14,7 +14,7 @@ CREATE DATABASE `demo`
 
 Run Hazlecast In Memory Grid
 ```
-docker run --network=host -e JAVA_OPTS="-Xms512M -Xmx512M" hazelcast/hazelcast:4.0.1
+docker run --network=host -e JAVA_OPTS="-Xms512M -Xmx512M" hazelcast/hazelcast:3.12.7
 ``` 
 
 Compile, run the tests and package
@@ -29,7 +29,7 @@ docker build -t 9.0.35-jdk8-spring-boot-hazle .
 
 Run apache-tomcat
 ```
-docker run --network=host --name tomcat-hazle-demo 9.0.35-jdk8-spring-boot-hazle::3.12.7
+docker run --network=host --name tomcat-hazle-demo 9.0.35-jdk8-spring-boot-hazle:latest
 ```
 
 ## Work In Progress
